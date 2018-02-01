@@ -1,0 +1,23 @@
+{
+  "name": "white2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://joosung21@github.com/joosung21/white2.git"
+  },
+  "author": "Jay Ahn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joosung21/white2/issues"
+  },
+  "homepage": "https://github.com/joosung21/white2#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,OAAO,CAAC,+DAAI,CAEZ,AAAA,IAAI,AAAC,CACH,SAAS,CAAE,IAAI,CAAI,AACrB,AAAA,IAAI,AAAC,CACH,MAAM,CAAE,CAAC,CAE0C,AAHrD,AAEE,IAFE,CAEF,CAAC,AAAC,CACA,WAAW,CAAE,8BAA8B,CAAI",
+    "sources": [
+        "../../sass/white2.sass"
+    ],
+    "names": [],
+    "file": "white2.css"
+}
