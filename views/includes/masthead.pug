@@ -1,0 +1,21 @@
+header
+  .head-title
+    a.logo(href='/')
+      img(src='/images/onda_logo.png')
+    input.search-field(type='text', size='26', placeholder='무엇을 찾으세요?')
+    button.search-button(type='button')
+      i.fa.fa-search.fa-lg.fa-flip-horizontal
+  .head-nav.ml-auto
+    a.nav(href='#') 내 찜록록
+    a.nav(href='#') 내 예약
+    a.nav(href='#') 내 포인트
+    a.nav.last.dropdown(href='#', data-toggle='dropdown')
+      i.fa.fa-user.fa-lg.mr-2
+      span 김온다
+      i.fa.fa-angle-down.ml-2
+    .dropdown-menu
+      a.dropdown-item(href='/member') 멤버 관리
+      a.dropdown-item(href='/point') 포인트 관리
+      a.dropdown-item(href='/book-list') 예약내역
+      .dropdown-divider
+      a.dropdown-item(href='/login') 로그아웃

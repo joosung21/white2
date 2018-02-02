@@ -1,0 +1,198 @@
+[
+  {
+    "title": "흥정스케치 펜션",
+    "address": "제주도 서귀포시 동홍동 960번지",
+    "lat": 33.272194, 
+    "lng": 126.566241,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "꿈게스트하우스",
+    "address": "제주도 서귀포시 성산읍 삼달리 33-12",
+    "lat": 33.368733, 
+    "lng": 126.870527,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "메죵 드 오조락",
+    "address": "제주도 서귀포시 성산읍 오조리 561-1",
+    "lat": 33.465908, 
+    "lng": 126.913384,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "뚜뚜네 하우스",
+    "address": "제주도 서귀포시 태평로 92번길 34",
+    "lat": 33.241425, 
+    "lng": 126.531091,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "DnJ게스트하우스",
+    "address": "제주도 서귀포시 표선면 세화리 1545",
+    "lat": 33.305497, 
+    "lng": 126.801039,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "말짜하우스",
+    "address": "제주도 서귀포시 호근동 1616-8",
+    "lat": 33.241083, 
+    "lng": 126.531733,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "더 포레스트 호스텔",
+    "address": "제주도 제주시 관덕로 15길 7-1",
+    "lat": 33.513891, 
+    "lng": 126.526752,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "해피앤게스트하우스",
+    "address": "제주도 제주시 구좌읍 김녕로8길 4",
+    "lat": 33.553775, 
+    "lng": 126.748008,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "제주해바라기펜션",
+    "address": "제주도 제주시 애월읍 신엄리 1079-1",
+    "lat": 33.475093, 
+    "lng": 126.369146,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "추암펜션",
+    "address": "제주시 관덕로 41번지",
+    "lat": 33.513411, 
+    "lng": 126.523834,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "AirBuddy Guest House",
+    "address": "제주시 구좌읍 하도리 3205",
+    "lat": 33.523885, 
+    "lng": 126.864566,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "미르 게스트하우스",
+    "address": "제주특별자치도 제주시 용담로7길 4",
+    "lat": 33.512816, 
+    "lng": 126.510707,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "숨비아일랜드",
+    "address": "제주특별자치도 서귀포시 성산읍 신천리 353-16 숨비아일랜드",
+    "lat": 33.339142, 
+    "lng": 126.855535,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "호스텔린든",
+    "address": "제주시 서광로 278 줌타워 6층",
+    "lat": 33.499981, 
+    "lng": 126.526289,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "큐브하우스",
+    "address": "제주특별자치도 서귀포시 남원읍 수망리 863",
+    "lat": 33.328558, 
+    "lng": 126.710070,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "부띠끄 풀빌라 루온토",
+    "address": "제주시 한경면 판포리 1684",
+    "lat": 33.365718, 
+    "lng": 126.203274,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "메이 게스트하우스",
+    "address": "서울 마포구 와우산로10길 14",
+    "lat": 37.548175, 
+    "lng": 126.923876,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "달콤게스트하우스",
+    "address": "서울시 중구 인현동2가 181-5",
+    "lat": 37.56348, 
+    "lng": 126.996688,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "옐로게스트하우스",
+    "address": "부산광역시 서구 송도해변로125번길 4",
+    "lat": 35.078119, 
+    "lng": 129.020635,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "블루피쉬 게스트하우스",
+    "address": "부산광역시 해운대구 중동1로 43번길",
+    "lat": 35.162121, 
+    "lng": 129.164202,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "여수쉬다게스트하우스",
+    "address": "전남 여수시 돌산읍 돌산로3554",
+    "lat": 34.728081, 
+    "lng": 127.744126,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "까르마풀빌라",
+    "address": "전남 여수시 돌산읍 평사리 1011-3",
+    "lat": 34.656021, 
+    "lng": 127.731343,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "목포 노르웨이 게스트하우스",
+    "address": "전남 목포시 호남로 64번길 12",
+    "lat": 34.793308, 
+    "lng": 126.385167,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "필게스트하우스",
+    "address": "충북 단양군 단양읍 별곡10길 6",
+    "lat": 36.983948, 
+    "lng": 128.370732,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "여행자숙소 마당",
+    "address": "충남 부여군 부여읍 신동엽길 10",
+    "lat": 36.277392, 
+    "lng": 126.909634,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "세그루게스트하우스",
+    "address": "강원도 춘천시 서면 금산2길 22-3",
+    "lat": 37.902674, 
+    "lng": 127.700305,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "코이노니아",
+    "address": "강원도 평창군 미탄면 평창동강로 523",
+    "lat": 37.303047, 
+    "lng": 128.543186,
+    "img": "/images/temp-hotel-02.png"
+  },
+  {
+    "title": "딮게스트하우스",
+    "address": "경상북도 경주시 성동동 337-1",
+    "lat": 35.846810, 
+    "lng": 129.215167,
+    "img": "/images/temp-hotel-02.png"
+  }
+]

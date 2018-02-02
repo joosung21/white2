@@ -1,3 +1,144 @@
 include ./includes/header.pug
 body
   include ./includes/masthead.pug
+
+  .list-container
+    .filters
+      .date.form-inline
+        input.form-control.form-calendar.mr-3(type='text', placeholder='체크인', style='width: 244px')
+        input.form-control.form-calendar.mr-3(type='text', placeholder='체크아웃', style='width: 244px')
+        input.form-control(type='text', placeholder='인원', style='width: 80px')
+      .form-inline
+        select.custom-select.mr-3(style='width: 244px')
+          option 모든 지역
+          option 서울
+          option 제주도
+          option 가평
+          option 춘천
+          option 안면도
+          option 변산반도
+          option 부산
+          option 여수
+        select.custom-select.mr-3(style='width: 244px')
+          option 모든 숙소형태
+          option 펜션
+          option 호텔
+          option 리조트
+          option 모텔
+          option 캠핑
+        .btn-group
+          button.btn.btn-outline-light.dropdown-toggle(type='button', data-toggle='dropdown')
+            | 태그로 필터하기
+          .dropdown-menu.dropdown-menu-small
+            a.dropdown-item(href='#') 가족
+            a.dropdown-item(href='#') 고급/럭셔리
+            a.dropdown-item(href='#') 단체/MT/워크샵
+            a.dropdown-item(href='#') 커플
+            a.dropdown-item(href='#') 풀빌라
+            a.dropdown-item(href='#') 한옥
+            a.dropdown-item(href='#') 애견펜션
+            a.dropdown-item(href='#') 키즈펜션
+            .dropdown-divider
+            a.dropdown-item(href='#') 바베큐장
+            a.dropdown-item(href='#') 수영장
+            a.dropdown-item(href='#') 조식 서비스
+            .dropdown-divider
+            a.dropdown-item(href='#') 계곡 주변
+            a.dropdown-item(href='#') 골프장 주변
+            a.dropdown-item(href='#') 수목원/휴양림 주변
+            a.dropdown-item(href='#') 스키장 주변
+            a.dropdown-item(href='#') 해수욕장 주변
+            a.dropdown-item(href='#') 강/호수 주변
+      .tags
+        button.btn.btn-outline-light(type='button')
+          | 계곡 주변
+          i.fa.fa-times.ml-2
+        button.btn.btn-outline-light(type='button')
+          | 고급/럭셔리
+          i.fa.fa-times.ml-2
+
+    //- Loader
+    .loader-wrapper
+      .loader
+
+    .list-box
+      .row
+        .col-md-6 36 검색결과
+        .col-md-6.text-right.tag-info
+          button.btn.btn-link.btn-sm(type='button') Reset
+          | "계곡 주변", "고급/럭셔리" 태그됨
+      .row
+        .col-md-6.unit
+          .card
+            .card-img-top(style='background-image: url("/images/temp-hotel-01.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart-o
+            .card-body
+              .card-title 제주 파크사이드 호텔
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card
+            .card-img-top(style='background-image: url("/images/temp-hotel-02.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart
+            .card-body
+              .card-title 리버사이드 호텔
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card
+            .card-img-top(style='background-image: url("/images/temp-hotel-03.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart-o
+            .card-body
+              .card-title 파인트리 리조트
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card
+            .card-img-top(style='background-image: url("/images/temp-hotel-04.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart-o
+            .card-body
+              .card-title 그린메도우
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card
+            .card-img-top(style='background-image: url("/images/temp-hotel-05.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart-o
+            .card-body
+              .card-title 스윗소로우
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card
+            .card-img-top(style='background-image: url("/images/temp-hotel-06.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart-o
+            .card-body
+              .card-title 사이공 팩토리
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+      .text-center.mt-5
+        button.btn.btn-light.btn-padding(type='button')
+          | 리스트 더보기
+          i.fa.fa-angle-down.ml-2
+
+  .map-container
+    #map(style='height: 100%')
+      script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAYAR9ha33tDQfl81KCVoePD_w3KcAaWGo&callback=initMap')

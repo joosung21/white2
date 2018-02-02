@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="62px" viewBox="0 0 50 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-11.1%" y="-7.1%" width="122.2%" height="117.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pin" filter="url(#filter-1)" transform="translate(3.000000, 2.000000)">
+            <g id="Group-2">
+                <g id="Pin">
+                    <g id="path-2-link" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M6.47133474,6.469534 C0.275396197,12.691788 -1.44415263,21.6259064 1.19570658,29.3885257 C6.90326708,45.9636772 22.0560753,55.4531486 22.0560753,55.4531486 C22.0560753,55.4531486 37.0272756,46.0244703 42.7953721,29.6358057 C42.7953721,29.5750126 42.8559081,29.5142195 42.8559081,29.4501403 C45.5563033,21.6259064 43.8367544,12.691788 37.6408159,6.469534 C29.0512523,-2.15651133 15.0608983,-2.15651133 6.47133474,6.469534 Z" id="path-2"></path>
+                    </g>
+                    <g id="selected">
+                        <path d="M6.47133474,6.469534 C0.275396197,12.691788 -1.44415263,21.6259064 1.19570658,29.3885257 C6.90326708,45.9636772 22.0560753,55.4531486 22.0560753,55.4531486 C22.0560753,55.4531486 37.0272756,46.0244703 42.7953721,29.6358057 C42.7953721,29.5750126 42.8559081,29.5142195 42.8559081,29.4501403 C45.5563033,21.6259064 43.8367544,12.691788 37.6408159,6.469534 C29.0512523,-2.15651133 15.0608983,-2.15651133 6.47133474,6.469534 Z" id="path-2"></path>
+                    </g>
+                </g>
+                <ellipse id="oval" fill="#FFFFFF" fill-rule="nonzero" cx="22" cy="23.0243094" rx="18" ry="18.0198895"></ellipse>
+                <path d="M27.715,30.927 L22.878,30.927 L22.878,29.66 L27.715,29.66 C27.845,29.66 27.951,29.553 27.951,29.42 L27.951,11.506 C27.951,11.376 27.846,11.269 27.716,11.269 L15.268,11.269 L15.268,30.294 L14,30.294 L14,10 L27.715,10 C28.545,10 29.22,10.675 29.22,11.505 L29.22,29.422 C29.22,30.252 28.545,30.927 27.715,30.927 Z" id="Shape" fill="#59A9FE" fill-rule="nonzero"></path>
+                <path d="M22.628,35.84 C22.473,35.84 22.322,35.798 22.188,35.716 L14.395,30.891 C14.147,30.738 14,30.473 14,30.181 L14,10.995 C14,10.535 14.375,10.16 14.835,10.16 C14.989,10.16 15.141,10.202 15.273,10.285 L23.068,15.109 C23.316,15.259 23.464,15.526 23.464,15.819 L23.464,35.005 C23.464,35.465 23.089,35.84 22.628,35.84 Z M15.268,29.94 L22.196,34.228 L22.196,16.06 L15.268,11.772 L15.268,29.94 Z" id="Shape" fill="#59A9FE" fill-rule="nonzero"></path>
+                <polygon id="Shape" fill="#59A9FE" fill-rule="nonzero" points="20.34 22.683 21.61 22.683 21.61 25.22 20.34 25.22"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
