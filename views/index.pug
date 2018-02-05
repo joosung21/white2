@@ -1,5 +1,5 @@
 include ./includes/header.pug
-body
+body.index-page
   include ./includes/masthead.pug
 
   .list-container
@@ -69,7 +69,7 @@ body
           | "계곡 주변", "고급/럭셔리" 태그됨
       .row
         .col-md-6.unit
-          .card
+          .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-01.png")')
               a.favorite(href='#')
                 i.fa.fa-heart-o
@@ -80,7 +80,7 @@ body
                 br
                 | 120,000원 - 240,000원
         .col-md-6.unit
-          .card
+          .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-02.png")')
               a.favorite(href='#')
                 i.fa.fa-heart
@@ -91,7 +91,7 @@ body
                 br
                 | 120,000원 - 240,000원
         .col-md-6.unit
-          .card
+          .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-03.png")')
               a.favorite(href='#')
                 i.fa.fa-heart-o
@@ -102,7 +102,7 @@ body
                 br
                 | 120,000원 - 240,000원
         .col-md-6.unit
-          .card
+          .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-04.png")')
               a.favorite(href='#')
                 i.fa.fa-heart-o
@@ -113,7 +113,7 @@ body
                 br
                 | 120,000원 - 240,000원
         .col-md-6.unit
-          .card
+          .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-05.png")')
               a.favorite(href='#')
                 i.fa.fa-heart-o
@@ -124,12 +124,34 @@ body
                 br
                 | 120,000원 - 240,000원
         .col-md-6.unit
-          .card
+          .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-06.png")')
               a.favorite(href='#')
                 i.fa.fa-heart-o
             .card-body
               .card-title 사이공 팩토리
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card(onclick='location.href="/view"')
+            .card-img-top(style='background-image: url("/images/temp-hotel-01.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart-o
+            .card-body
+              .card-title 제주 파크사이드 호텔
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card(onclick='location.href="/view"')
+            .card-img-top(style='background-image: url("/images/temp-hotel-02.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart
+            .card-body
+              .card-title 리버사이드 호텔
               .card-text
                 | 제주도 서귀포시 위미리
                 br

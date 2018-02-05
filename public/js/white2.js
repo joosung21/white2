@@ -95,6 +95,12 @@ function initMap() {
 
 $(document).ready(function() {
 
+  // Viewpage Top Image Slider
+  $("#view-top-slider").lightSlider({
+    loop:true,
+    keyPress:true
+  });
+
   // For only demo play: Should be removed later
   $(".list-box").hide();
   setTimeout(function() {

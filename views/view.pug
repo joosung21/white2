@@ -1,0 +1,193 @@
+include ./includes/header.pug
+body
+  include ./includes/masthead.pug
+
+  .view-header
+    ul#view-top-slider.content-slider
+      li
+        img(src='/images/temp-hotel-01.png')
+      li
+        img(src='/images/temp-hotel-02.png')
+      li
+        img(src='/images/temp-hotel-03.png')
+      li
+        img(src='/images/temp-hotel-04.png')
+      li
+        img(src='/images/temp-hotel-05.png')
+      li
+        img(src='/images/temp-hotel-06.png')
+    .container
+      .row
+        .col-lg-8
+          .property-title
+            .category 제주도 > 호텔
+            h1.property-name 제주 그린메도우 호텔
+
+  .container.my-4
+    .row
+      .col-lg-8
+        .quick-buttons.row
+          .col-4
+            button.btn.btn-white(type='button')
+              i.fa.fa-heart.fa-lg.mr-2
+              | 찜하기
+          .col-4.text-center
+            button.btn.btn-white(type='button')
+              i.fa.fa-envelope.fa-lg.mr-2
+              | 문의하기
+          .col-4.text-right
+            button.btn.btn-white(type='button')
+              i.fa.fa-share-square.fa-lg.mr-2
+              | 공유하기
+        .white-box
+          p.mb-5
+            | 그랜드 힐튼 서울 호텔은 서울 중심부에서는 15분 이내, 인천국제공항에서는 40분 이내 거리에 있습니다. 호텔에서 시내 중심지역 및 이태원, 홍대 입구 역까지 호텔 내 무료 셔틀버스를 이용하여 편하게 이동할 수 있습니다.
+            br
+            br
+            | 식사는 세계의 다채로운 요리들로 원하시는 대로 선택하실 수 있습니다. 시가 라운지에서 편하게 보내실 수도 또는 스타일리시한 레스토랑에서 맛있는 요리를 마음껏 즐기실 수도 있습니다.
+            br
+            br
+            | 피트니스 센터에서 운동하시거나 25미터 수영장에 뛰어드시면 하루의 피로를 푸실 수 있습니다. 스파에서는 페이셜 마사지나 바디 트리트먼트를 받으실 수 있습니다. 그랜드 힐튼 서울 호텔에는 최대 2,500명을 수용하여 회의나 이벤트, 웨딩, 콘서트 등 다양한 목적에 맞게 이용할 수 있는 컨벤션 센터가 있습니다. 또한 회의실과 그랜드볼룸, 최첨단 오디오비주얼 설비를 갖춘 컨벤션 홀 및 초고속 인터넷을 기본으로 비즈니스에 필요한 모든 설비를 갖춘 비즈니스 센터를 마련하여 모든 행사 및 비즈니스를 지원합니다.
+          h4 공공시설
+          ul.row
+            li.col-6 매점/편의점
+            li.col-6 세미나실
+            li.col-6 수영장
+            li.col-6 카페
+            li.col-6 레스토랑
+          h4 숙소 서비스
+          ul.row
+            li.col-6 조식서비스
+            li.col-6 WiFi
+            li.col-6 발렛파킹
+            li.col-6 금연
+            li.col-6 공항 셔틀
+
+        .white-box.room-list
+          .search-box.form-row
+            .col-md-5
+              input.form-control.form-calendar.mr-3(type='text', placeholder='체크인', value='2018-04-01')
+            .col-md-5
+              input.form-control.form-calendar.mr-3(type='text', placeholder='체크아웃', value='2018-04-02')
+            .col-md-2
+              input.form-control(type='text', placeholder='인원', style='width: 80px')
+
+          .room.form-row
+            .col-lg-6
+              a(href='#', data-toggle='modal', data-target='#sliderModal')
+                img.img-fluid(src='/images/temp-hotel-03.png')
+            .col-lg-6.pl-md-4
+              h4 Single Room
+              div
+                i.fa.fa-bed.fa-lg.fa-fw
+                span 트윈침대 1개 + 조식 2인 포함
+              p.mt-2
+                | 에어컨, 전용욕실, 평면TV, 무료 WiFi, 난방시설, 소파, 헤어드라이기, 욕실용품, 화장실, 슬리펴, 전화, 케이블채널, 냉장고, 전기주전자
+              .d-flex.align-items-center
+                h5.mb-0.mr-auto 120,000원
+                select.custom-select
+                  option(selected) 객실수
+                  option 1 객실
+                  option 2 객실
+                  option 3 객실
+                  option 4 객실
+                  option 5 객실
+                  option 6 객실
+                  option 7 객실
+                  option 8 객실
+                  option 9 객실
+                  option 10 객실
+                button.btn.btn-primary.ml-2(type='button', onclick='location.href="/book"')
+                  i.fa.fa-check.fa-lg.fa-fw
+                  | 지금예약
+
+          .room.form-row.diabled
+            .col-lg-6
+              a(href='#', data-toggle='modal', data-target='#sliderModal')
+                img.img-fluid(src='/images/temp-hotel-03.png')
+            .col-lg-6.pl-md-4
+              h4 Single Room
+              div
+                i.fa.fa-bed.fa-lg.fa-fw
+                span 트윈침대 1개 + 조식 2인 포함
+              p.mt-2
+                | 에어컨, 전용욕실, 평면TV, 무료 WiFi, 난방시설, 소파, 헤어드라이기, 욕실용품, 화장실, 슬리펴, 전화, 케이블채널, 냉장고, 전기주전자
+              .d-flex.align-items-center
+                h5.mb-0.mr-auto 120,000원
+                button.btn.btn-secondary.ml-2(type='button', disabled)
+                  | 판매완료
+
+      .col-lg-4.view-right
+        .white-box.location.p-4
+          #viewmap(style='height: 250px')
+            script.
+              function initMap() {
+                var myLatLng = {lat: 37.507033, lng: 127.067124};
+                var map = new google.maps.Map(document.getElementById('viewmap'), {
+                  zoom: 11,
+                  center: myLatLng
+                });
+                var image = '/images/pin.svg';
+                var marker = new google.maps.Marker({
+                  position: myLatLng,
+                  map: map,
+                  icon: image
+                });
+              }
+            script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAYAR9ha33tDQfl81KCVoePD_w3KcAaWGo&callback=initMap')
+          .address.text-gray 제주도 서귀포시 위미리 136-17
+        .white-box
+          p
+            | 체크인:  2:00pm
+            br
+            | 체크아웃: 11:00am
+          h5.my-4 가장 가까운 관광명소
+          dl.row.text-gray
+            dd.col-8 제주한라병원
+            dd.col-4 0.4 km
+            dd.col-8 신라면세점
+            dd.col-4 0.5 km
+            dd.col-8 제주 파라다이스 카지노
+            dd.col-4 0.6 km
+            dd.col-8 한라수목원
+            dd.col-4 2.4 km
+            dd.col-8 이호테우해변
+            dd.col-4 3.5 km
+            dd.col-8 용두암
+            dd.col-4 3.6 km
+            dd.col-8 Jeju Love Land
+            dd.col-4 4.3 km
+            dd.col-8 신비의도로
+            dd.col-4 4.5 km
+            dd.col-8 탑동광장
+            dd.col-4 4.5 km
+            dd.col-8 제주항
+            dd.col-4 5.5 km
+
+  //-- 슬라이더 모달
+  #sliderModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='sliderModalLabel', aria-hidden='true')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-header
+          h5#sliderModalLabel.modal-title Deluxe Room
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          #carouselRoomPicture.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+              li.active(data-target='#carouselRoomPicture', data-slide-to='0')
+              li(data-target='#carouselRoomPicture', data-slide-to='1')
+              li(data-target='#carouselRoomPicture', data-slide-to='2')
+            .carousel-inner
+              .carousel-item.active
+                img.d-block.w-100(src='/images/temp-hotel-02.png', alt='First slide')
+              .carousel-item
+                img.d-block.w-100(src='/images/temp-hotel-03.png', alt='Second slide')
+              .carousel-item
+                img.d-block.w-100(src='/images/temp-hotel-04.png', alt='Third slide')
+            a.carousel-control-prev(href='#carouselRoomPicture', role='button', data-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.sr-only Previous
+            a.carousel-control-next(href='#carouselRoomPicture', role='button', data-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.sr-only Next

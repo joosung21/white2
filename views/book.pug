@@ -1,0 +1,159 @@
+include ./includes/header.pug
+body
+  include ./includes/masthead.pug
+
+  .container.my-4
+    .row
+      .col-lg-8
+        h4.text-gray 예약하기
+        .d-flex
+          h1.text-blue 제주 제이제이 호텔
+          .quick-buttons.ml-auto
+            button.btn.btn-white(type='button', onclick='location.href="/view"')
+              i.fa.fa-reply.fa-lg.mr-2
+              | 돌아가기
+    .row
+      .col-lg-8
+        .white-box.room-list
+          .room.form-row.m-0
+            .col-lg-4
+              a(href='#', data-toggle='modal', data-target='#sliderModal')
+                img.img-fluid(src='/images/temp-hotel-03.png')
+            .col-lg-8.pl-md-4
+              h4 Single Room
+              div
+                i.fa.fa-bed.fa-lg.fa-fw
+                span 트윈침대 1개 + 조식 2인 포함
+              p.mt-2
+                | 에어컨, 전용욕실, 평면TV, 무료 WiFi, 난방시설, 소파, 헤어드라이기, 욕실용품, 화장실, 슬리펴, 전화, 케이블채널, 냉장고, 전기주전자
+          .p-4
+          dl.row
+            dt.col-3 체크인
+            dd.col-9 2018년 1월 11일(목)
+          dl.row
+            dt.col-3 체크아웃
+            dd.col-9 2018년 1월 12일(금)
+          dl.row
+            dt.col-3 포함사항
+            dd.col-9
+              | 대형 더블침대 1개
+              br
+              | 조식 2인
+          dl.row
+            dt.col-3  예약안내
+            dd.col-9
+              | ...
+
+        .white-box
+          h4 예약정보 입력
+          .form-group
+            label 예약자 이름
+            input.form-control(type='text', value='강하나')
+          .form-group
+            label 이메일 주소
+            input.form-control(type='email', value='hana@email.com')
+          .form-group
+            label 연락처
+            input.form-control(type='text')
+          .form-row
+            .col-lg
+              .form-group
+                label 성인
+                input.form-control(type='number', value='2', min='1')
+            .col-lg
+              .form-group
+                label 어린이
+                input.form-control(type='number', min='0')
+            .col-lg
+              .form-group
+                label 유아
+                input.form-control(type='number', min='0')
+          .form-group
+            label 메모 / 요청사항
+            textarea.form-control(rows='4')
+
+          dl.row
+            dt.col-3 필요 포인트
+            dd.col-9 240,000
+          dl.row
+            dt.col-3 내 잔여 포인트
+            dd.col-9 150,000
+          dl.row
+            dt.col-3 추가 결제액
+            dd.col-9 90,000 원
+          dl.row
+            dt.col-3 결제수단
+            dd.col-9
+              select.custom-select
+                option 카드결제
+                option 무통장입금
+        .row.mb-5
+          .col-lg-4
+            a.btn.btn-light.btn-block.btn-lg.mt-4(href='/view')
+              i.fa.fa-reply.fa-lg.mr-2
+              | 취소
+          .col-lg-8
+            a.btn.btn-primary.btn-block.btn-lg.mt-4(href='/confirm')
+              i.fa.fa-check.fa-lg.fa-fw
+              | 예약하기
+
+      .col-lg-4.view-right(style='margin-top: 0')
+        .white-box.location.p-4
+          #viewmap(style='height: 250px')
+            script.
+              function initMap() {
+                var myLatLng = {lat: 37.507033, lng: 127.067124};
+                var map = new google.maps.Map(document.getElementById('viewmap'), {
+                  zoom: 11,
+                  center: myLatLng
+                });
+                var image = '/images/pin.svg';
+                var marker = new google.maps.Marker({
+                  position: myLatLng,
+                  map: map,
+                  icon: image
+                });
+              }
+            script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAYAR9ha33tDQfl81KCVoePD_w3KcAaWGo&callback=initMap')
+          .address.text-gray 제주도 서귀포시 위미리 136-17
+
+        .white-box
+          dl
+            dt 총 숙박비
+            dd
+              h1 240,000 원
+          dl
+            dt 취소 수수료
+            dd
+              | 1월 8일 PM 11:59 전까지 무료 취소 가능
+              br
+              | 1월 9일 AM 12:00부터	₩43,125
+
+
+  //-- 슬라이더 모달
+  #sliderModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='sliderModalLabel', aria-hidden='true')
+    .modal-dialog.modal-lg(role='document')
+      .modal-content
+        .modal-header
+          h5#sliderModalLabel.modal-title Deluxe Room
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          #carouselRoomPicture.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+              li.active(data-target='#carouselRoomPicture', data-slide-to='0')
+              li(data-target='#carouselRoomPicture', data-slide-to='1')
+              li(data-target='#carouselRoomPicture', data-slide-to='2')
+            .carousel-inner
+              .carousel-item.active
+                img.d-block.w-100(src='/images/temp-hotel-02.png', alt='First slide')
+              .carousel-item
+                img.d-block.w-100(src='/images/temp-hotel-03.png', alt='Second slide')
+              .carousel-item
+                img.d-block.w-100(src='/images/temp-hotel-04.png', alt='Third slide')
+            a.carousel-control-prev(href='#carouselRoomPicture', role='button', data-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.sr-only Previous
+            a.carousel-control-next(href='#carouselRoomPicture', role='button', data-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.sr-only Next
