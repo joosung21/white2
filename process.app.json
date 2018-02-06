@@ -1,0 +1,31 @@
+{
+  /**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration/
+   */
+  "apps" : [
+    {
+      "name": "prototype-white",
+      "script": "app.js",
+      "watch": true,
+      "instances" : "1",
+      "exec_mode" : "cluster",
+      "merge_logs": true,
+      "wait_ready": true,
+      "kill_timeout": 1000,
+      "restart_delay": 1000,
+      "env_production" : {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+
+  /**
+   * Deployment section
+   * http://pm2.keymetrics.io/docs/usage/deployment/
+   */
+  "deploy" : {
+    "production" : {},
+    "dev" : {}
+  }
+}
