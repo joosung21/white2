@@ -1,0 +1,31 @@
+include ./includes/header.pug
+body
+
+  .container.my-4
+    .white-box.p-5
+      h1.mb-5 복지몰 Site Map
+      ol
+        li
+          a(href='/login', target='_black') 로그인
+        li
+          a(href='/', target='_black') 메인 페이지
+        li
+          a(href='/favorite', target='_black') 내 찜목록
+        li
+          a(href='/view', target='_black') 뷰 페이지
+        ol
+          li
+            a(href='/book', target='_black') 예약하기
+          li
+            a(href='/confirm', target='_black') 예약확인
+        li
+          a(href='/book-list', target='_black') 예약내역
+        li 관리자 페이지
+          ol
+            li
+              a(href='/member', target='_black') 멤버 관리
+            li
+              a(href='/point', target='_black') 포인트 관리
+            ol
+             li
+              a(href='/point-history', target='_black') 포인트 사용내역
