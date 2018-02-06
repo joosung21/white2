@@ -1,0 +1,129 @@
+include ./includes/header.pug
+body
+  include ./includes/masthead.pug
+
+  .container.my-4
+    .row.d-print-none
+      .col-lg-8.my-5.text-center
+        h1.text-blue
+          i.fa.fa-check.fa-lg.mr-2
+          | 예약완료
+        .lead 예약확인서가 투숙자의 이메일로 발송되었습니다.
+
+    .row
+      .col-lg-8
+        .white-box.p-5
+          .d-flex.align-items-center
+            img.mr-2(src='/images/onda_logo.png', style='height: 18px')
+            h4.m-0.text-gray Member's Mall
+          h1.text-center.py-5.my-5 예약확인서
+          .row
+            .col-lg
+              dl.row
+                dt.col-4 숙소명
+                dd.col-8 제주 제주제이 호텔
+              dl.row
+                dt.col-4 주소
+                dd.col-8 제주특별자치도 제주시 귀곡리 740-14
+              dl.row
+                dt.col-4 투숙자명
+                dd.col-8 안주성
+              dl.row
+                dt.col-4 인원
+                dd.col-8 성인 2, 유아 1
+              dl.row
+                dt.col-4 연락처
+                dd.col-8 010-2256-5530
+              dl.row
+                dt.col-4 이메일
+                dd.col-8 hana@email.com
+            .col-lg
+              dl.row
+                dt.col-4 예약번호
+                dd.col-8 LFI24505
+              dl.row
+                dt.col-4 체크인
+                dd.col-8 2018년 1월 11일(목) 15:00
+              dl.row
+                dt.col-4 체크아웃
+                dd.col-8 2018년 1월 12일(금) 11:00
+              dl.row
+                dt.col-4 총 숙박 기간
+                dd.col-8 1박
+              dl.row
+                dt.col-4 객실명
+                dd.col-8 Deluxe Room
+              dl.row
+                dt.col-4 총액
+                dd.col-8 240,000 원
+          h4.mt-5 유의사항
+          p
+            | - 최대인원 초과시 입실 및 환불이 불가합니다.
+            br
+            | - 1실이상 예약은 사전협의후 예약하시기 바랍니다.
+            br
+            | - 기준인원 초과시 1인에 [기준인원초과요금]이 추가됩니다 (유아 24개월이상)
+            br
+            | - 입실시간은 오후 3시부터입니다.
+            br
+            | - 퇴실시간은 오전 11시 까지 입니다.
+            br
+            | - 객실정리가 끝나시면 펜션지기에게 연락하시어 퇴실점검을 받으시기 바랍니다.
+            br
+            | - 오후 10시 이후의 입실은 사전에 반드시 연락주시기 바랍니다.
+            br
+            | - 미성년자는 보호자 동반없이 이용하실수 없습니다.
+            br
+            | - 애완동물(절대)은 부득이 타 객실 및 손님을 위해 입실을 금하오니 양해 바랍니다.
+            br
+            | - 집기파손시에는 펜션지기에게 알려주시기 바랍니다.
+            br
+            | - 오후 10시 이후의 바베큐장 이용및 고성방가는 타 객실손님을 위하여 금하오니 양해바랍니다.
+            br
+            | - 바베큐 이용시 10,000원(2인기준)의 사용료(숯사용)가 있습니다.
+            br
+            | - 객실안에서 휴대용가스버너의 사용은 금합니다 .(화재예방)
+            br
+            | - 저희 펜션은 자연휴양림내에 위치하고 있어서 폭죽,불꽃놀이 사용을 할 수 없습니다.
+
+        .row.mb-5.d-print-none
+          .col-lg-4
+            a.btn.btn-light.btn-block.btn-lg.mt-4(href='/book-list')
+              i.fa.fa-reply.fa-lg.mr-2
+              | 예약목록
+          .col-lg-8
+            button.btn.btn-primary.btn-block.btn-lg.mt-4(type='button', onclick='window.print()')
+              i.fa.fa-print.fa-lg.fa-fw
+              | 인쇄하기
+
+      .col-lg-4.d-print-none
+        .white-box
+          dl
+            dt 총 숙박비
+            dd
+              h1 240,000 원
+          dl
+            dt 취소 수수료
+            dd
+              | 1월 8일 PM 11:59 전까지 무료 취소 가능
+              br
+              | 1월 9일 AM 12:00부터	₩43,125
+          -
+            var message01 = `
+              swal({
+                title: "취소 수수료: 43,125원",
+                text: "예약을 취소 하시겠습니까?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "네, 취소합니다.",
+                cancelButtonText: "아니오",
+                closeOnConfirm: false
+              },
+              function(){
+                swal("예약이 취소 되었습니다.", "", "success");
+              });
+            `
+          button.btn.btn-outline-danger.btn-block.btn-lg(type='button', onclick= message01)
+            i.fa.fa-times.fa-lg.mr-2
+            | 예약취소

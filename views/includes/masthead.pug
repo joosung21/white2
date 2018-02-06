@@ -2,11 +2,46 @@ header
   .head-title
     a.logo(href='/')
       img(src='/images/onda_logo.png')
-    input.search-field(type='text', size='26', placeholder='무엇을 찾으세요?')
+    input.search-field(type='text', size='26', placeholder='무엇을 찾으세요?', data-toggle='dropdown')
+    .dropdown-menu
+      a.dropdown-item(href='#')
+        span.mr-2 풀스파가 있는
+        span.text-dark 럭셔리 펜션
+      a.dropdown-item(href='#')
+        span.mr-2 가족여행
+        span.text-dark 호텔/리조트
+      a.dropdown-item(href='#')
+        span.mr-2 싱글족을 위한
+        span.text-dark 호스텔/게스트하우스
+      a.dropdown-item(href='#')
+        span.mr-2 아이가 뛰놀기좋은
+        span.text-dark 리조트
+      a.dropdown-item(href='#')
+        span.mr-2 바베큐하기 좋은
+        span.text-dark 펜션
+      a.dropdown-item(href='#')
+        span.mr-2 자연과 함께하는
+        span.text-dark 캠핑/글램핑
+      a.dropdown-item(href='#')
+        span.mr-2 떠나자!
+        span.text-dark 제주도 숙소
+      a.dropdown-item(href='#')
+        span.mr-2 백합죽 먹으러
+        span.text-dark 변산반도 숙소
+      a.dropdown-item(href='#')
+        span.mr-2 워크샵을 하기 좋은
+        span.text-dark 대용량 펜션
+      a.dropdown-item(href='#')
+        span.mr-2 돈쓰고 기분내자
+        span.text-dark 5성급 호텔
+      a.dropdown-item(href='#')
+        span.mr-2 잠만자면 된다
+        span.text-dark 저렴한 숙소
+
     button.search-button(type='button')
       i.fa.fa-search.fa-lg.fa-flip-horizontal
   .head-nav.ml-auto
-    a.nav(href='#')
+    a.nav(href='/favorite')
       | 내 찜록록
       span.badge.badge-pill.badge-primary.ml-1 6
     a.nav(href='#') 내 예약

@@ -1,0 +1,111 @@
+include ./includes/header.pug
+body.index-page
+  include ./includes/masthead.pug
+
+  .list-container
+    -
+      var message01 = `
+        swal({
+          title: "찜목록을 모두 삭제하시겠습니까?",
+          text: "",
+          type: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#DD6B55",
+          confirmButtonText: "삭제",
+          cancelButtonText: "아니오",
+          closeOnConfirm: false
+        },
+        function(){
+          swal("삭제 되었습니다.", "", "success");
+        });
+      `
+    .filters.pt-4
+      .d-flex
+        h4.text-dark
+          i.fa.fa-heart-o.mr-2.text-gray
+          | 내 찜목록
+        a.btn.btn-light.ml-auto.mr-2(href='#', onclick= message01)
+          i.fa.fa-trash.fa-lg.mr-2
+          | 찜목록 비우기
+        a.btn.btn-light(href='/')
+          i.fa.fa-times.fa-lg.mr-2
+          | 닫기
+
+    //- Loader
+    .loader-wrapper
+      .loader
+
+    .list-box
+      .row
+        .col-md-6 내가 찜한 6개 숙소
+      .row
+        .col-md-6.unit
+          .card(onclick='location.href="/view"')
+            .card-img-top(style='background-image: url("/images/temp-hotel-01.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart
+            .card-body
+              .card-title 제주 파크사이드 호텔
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card(onclick='location.href="/view"')
+            .card-img-top(style='background-image: url("/images/temp-hotel-02.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart
+            .card-body
+              .card-title 리버사이드 호텔
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card(onclick='location.href="/view"')
+            .card-img-top(style='background-image: url("/images/temp-hotel-03.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart
+            .card-body
+              .card-title 파인트리 리조트
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card(onclick='location.href="/view"')
+            .card-img-top(style='background-image: url("/images/temp-hotel-04.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart
+            .card-body
+              .card-title 그린메도우
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card(onclick='location.href="/view"')
+            .card-img-top(style='background-image: url("/images/temp-hotel-05.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart
+            .card-body
+              .card-title 스윗소로우
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+        .col-md-6.unit
+          .card(onclick='location.href="/view"')
+            .card-img-top(style='background-image: url("/images/temp-hotel-06.png")')
+              a.favorite(href='#')
+                i.fa.fa-heart
+            .card-body
+              .card-title 사이공 팩토리
+              .card-text
+                | 제주도 서귀포시 위미리
+                br
+                | 120,000원 - 240,000원
+
+  .map-container
+    #map(style='height: 100%')
+      script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAYAR9ha33tDQfl81KCVoePD_w3KcAaWGo&callback=initMap')

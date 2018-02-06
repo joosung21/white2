@@ -10,6 +10,8 @@ app.use('/assets/', express.static('assets'))
 app.get('/', function (req, res){res.render('index')})
 app.get('/view', function (req, res){res.render('view')})
 app.get('/book', function (req, res){res.render('book')})
+app.get('/confirm', function (req, res){res.render('confirm')})
+app.get('/favorite', function (req, res){res.render('favorite')})
 
 app.listen(3000, function () {
   console.log('App listening on port 3000!')

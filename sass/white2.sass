@@ -109,6 +109,39 @@ input.form-control, textarea.form-control
   background: none
   background: url('/images/angle-down.svg') top 14px right 8px no-repeat
 
+// Custom Checkbox & Radio
+.custom-control
+  margin-right: 0
+  *
+    vertical-align: middle
+  span.custom-control-indicator
+    background-color: white
+    border: 1px solid #aaa
+    border-radius: 3px
+    width: 1.3rem
+    height: 1.3rem
+    margin-right: 0
+    &:focus
+      outline: none
+      box-shadow: none
+  .custom-control-input:checked~.custom-control-indicator
+    background-color: #fff
+    border-color: #aaa
+    border-width: 2px
+    background-image: url('/images/checkbox_check.svg') !important
+    background-size: 18px 8px
+  span.custom-control-description
+    margin-left: .5rem
+    margin-top: .1rem
+    margin-bottom: .2rem
+  .custom-control-input[type='radio'] + span.custom-control-indicator
+    border-radius: 1rem
+    background-image: url('/images/Oval.svg') !important
+  .custom-control-input[type='radio']:checked~.custom-control-indicator
+    border: 0
+    background-color: $blue
+
+
 // Dropdown Menu
 .dropdown-menu
   border: none
@@ -149,6 +182,15 @@ input.form-control, textarea.form-control
     .card-text
       color: $gray
       font-weight: 300
+
+// Sweetalert customizing
+.sweet-alert h2
+  font-weight: 300
+  font-size: 1.7rem
+
+
+//------------------------ Page Layout ----------------------//
+
 
 // Master Head
 header
@@ -235,6 +277,9 @@ header
 body.index-page
   header
     position: fixed
+@media print
+  header
+    display: none
 
 // Loader
 .loader
@@ -265,6 +310,9 @@ body.index-page
   ul.row
     li
      margin-bottom: .5rem
+  p
+
+
 //---------------- Main Page -------------------//
 .list-container
   width: 720px
