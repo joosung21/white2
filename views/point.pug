@@ -1,0 +1,202 @@
+include ./includes/header.pug
+body
+  include ./includes/masthead.pug
+
+  .container.my-4
+    .white-box.p-5
+      h1.mb-5 포인트 관리
+      .form-row.mb-5
+        .col-md-6
+          .form-inline
+            select.custom-select
+              option 모든 부서
+              option 총무팀
+              option 기획팀
+              option 계약팀
+              option 인사팀
+              option 계약팀
+            input.form-control.mx-2(type='text', placeholder='이름으로 검색')
+        .col-md-6.text-right
+          a.btn.btn-outline-primary(href='#', data-toggle='modal', data-target='#editMassPointModal')
+            i.fa.fa-th-list.fa-lg.mr-2
+            | 포인트 일괄수정
+
+      table.table.table-hover.table-vertical-middle
+        thead
+          tr
+            th
+              | 이름
+              i.fa.fa-angle-down.ml-2
+            th
+              | 부서
+              i.fa.fa-angle-down.ml-2
+            th.text-right
+              | 누적사용 포인트
+            th.text-right
+              | 잔여 포인트
+            th
+        tbody
+          tr
+            th 강하나
+            td 총무팀
+            td.text-right 0
+            td.text-right 150,000
+            td.text-right
+              a.btn.btn-light.mr-2(href='/point-history', data-toggle='tooltip', title='사용 내역')
+                i.fa.fa-bars.fa-lg
+              a.btn.btn-light(href='#', data-toggle='modal', data-target='#editPointModal')
+                i.fa.fa-pencil.fa-lg
+          tr
+            th 구진규
+            td 기획팀
+            td.text-right 0
+            td.text-right 300,000
+            td.text-right
+              a.btn.btn-light.mr-2(href='/point-history', data-toggle='tooltip', title='사용 내역')
+                i.fa.fa-bars.fa-lg
+              a.btn.btn-light(href='#', data-toggle='modal', data-target='#editPointModal')
+                i.fa.fa-pencil.fa-lg
+          tr
+            th 나문성
+            td 계약팀
+            td.text-right 150,000
+            td.text-right 0
+            td.text-right
+              a.btn.btn-light.mr-2(href='/point-history', data-toggle='tooltip', title='사용 내역')
+                i.fa.fa-bars.fa-lg
+              a.btn.btn-light(href='#', data-toggle='modal', data-target='#editPointModal')
+                i.fa.fa-pencil.fa-lg
+          tr
+            th 조유화
+            td 인사팀
+            td.text-right 300,000
+            td.text-right 0
+            td.text-right
+              a.btn.btn-light.mr-2(href='/point-history', data-toggle='tooltip', title='사용 내역')
+                i.fa.fa-bars.fa-lg
+              a.btn.btn-light(href='#', data-toggle='modal', data-target='#editPointModal')
+                i.fa.fa-pencil.fa-lg
+          tr
+            th 반지헌
+            td 기획팀
+            td.text-right 150,000
+            td.text-right 150,000
+            td.text-right
+              a.btn.btn-light.mr-2(href='/point-history', data-toggle='tooltip', title='사용 내역')
+                i.fa.fa-bars.fa-lg
+              a.btn.btn-light(href='#', data-toggle='modal', data-target='#editPointModal')
+                i.fa.fa-pencil.fa-lg
+          tr
+            th 나미화
+            td 총무팀
+            td.text-right 0
+            td.text-right 150,000
+            td.text-right
+              a.btn.btn-light.mr-2(href='/point-history', data-toggle='tooltip', title='사용 내역')
+                i.fa.fa-bars.fa-lg
+              a.btn.btn-light(href='#', data-toggle='modal', data-target='#editPointModal')
+                i.fa.fa-pencil.fa-lg
+          tr
+            th 윤진미
+            td 계약팀
+            td.text-right 80,000
+            td.text-right 70,000
+            td.text-right
+              a.btn.btn-light.mr-2(href='/point-history', data-toggle='tooltip', title='사용 내역')
+                i.fa.fa-bars.fa-lg
+              a.btn.btn-light(href='#', data-toggle='modal', data-target='#editPointModal')
+                i.fa.fa-pencil.fa-lg
+          tr
+            th 이준
+            td 계약팀
+            td.text-right 300,000
+            td.text-right 0
+            td.text-right
+              a.btn.btn-light.mr-2(href='/point-history', data-toggle='tooltip', title='사용 내역')
+                i.fa.fa-bars.fa-lg
+              a.btn.btn-light(href='#', data-toggle='modal', data-target='#editPointModal')
+                i.fa.fa-pencil.fa-lg
+          tr
+            th 장연우
+            td 기획팀
+            td.text-right 0
+            td.text-right 150,000
+            td.text-right
+              a.btn.btn-light.mr-2(href='/point-history', data-toggle='tooltip', title='사용 내역')
+                i.fa.fa-bars.fa-lg
+              a.btn.btn-light(href='#', data-toggle='modal', data-target='#editPointModal')
+                i.fa.fa-pencil.fa-lg
+          tr
+            th 반요환
+            td 총무팀
+            td.text-right 0
+            td.text-right 150,000
+            td.text-right
+              a.btn.btn-light.mr-2(href='/point-history', data-toggle='tooltip', title='사용 내역')
+                i.fa.fa-bars.fa-lg
+              a.btn.btn-light(href='#', data-toggle='modal', data-target='#editPointModal')
+                i.fa.fa-pencil.fa-lg
+
+      nav.mt-5
+        ul.pagination.justify-content-center
+          li.page-item.disabled
+            span.page-link 이전
+          li.page-item.active
+            span.page-link 1
+          li.page-item
+            a.page-link(href='#') 2
+          li.page-item
+            a.page-link(href='#') 3
+          li.page-item
+            a.page-link(href='#') 다음
+
+//- 포인트 일괄수정 modal
+#editMassPointModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5.modal-title 포인트 일괄수정
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        p 1. CSV 파일을 다운로드 받습니다.
+        .form-group
+          a.btn.btn-primary(href='#')
+            i.fa.fa-download.fa-lg.mr-2
+            | CSV 다운로드
+        p 2. 포인트 정보를 수정한 CSV 파일을 업로드 합니다.
+        .form-group
+          input.form-control-file(type="file")
+
+      .modal-footer
+        button.btn.btn-light(type='button', data-dismiss='modal') 취소
+        button.btn.btn-primary(type='button', disabled) 포인트 일괄수정
+
+//- 포인트 수정 modal
+#editPointModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5.modal-title
+          i.fa.fa-pencil.fa-lg.mr-2
+          | 포인트 수정
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        dl.row
+          dt.col-3 부서
+          dd.col-9 총무팀
+        dl.row
+          dt.col-3 이름
+          dd.col-9 강하나
+        dl.row
+          dt.col-3 잔여 포인트
+          dd.col-9 150,000
+        .form-group
+          label 포인트 증감
+          input.form-control(type='number')
+          small 차감은 마이너스 '-'로 입력하세요.
+
+      .modal-footer
+        button.btn.btn-light(type='button', data-dismiss='modal') 취소
+        button.btn.btn-primary(type='button') 포인트 수정

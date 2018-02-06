@@ -1,0 +1,36 @@
+include ./includes/header.pug
+body
+  include ./includes/masthead.pug
+
+  .container.my-4
+    .white-box.p-5
+      .row
+        .col
+          h1.mb-5 포인트 사용내역
+        .col.text-right
+          a.btn.btn-outline-light(href='/point')
+            i.fa.fa-reply.fa-lg.mr-2
+            | 포인트 관리로 돌아가기
+
+      h5.mb-4
+        | 총무팀 강하나
+        span.text-blue.pl-4 잔여 28,000
+      table.table.table-hover.table-vertical-middle
+        thead
+          tr
+            th 적용일시
+            th 내용
+            th.text-right 포인트 증감
+            th.text-right 잔여포인트
+        tbody
+          tr
+            td 2018-02-08 10:00
+            td
+              a(href='#', data-toggle='modal', data-target='#bookDetailModal') LF10512 (2박)
+            td.text-right.text-danger -132,000
+            td.text-right 28,000
+          tr
+            td 2018-01-01 10:00
+            td 2018년 포인트 지급
+            td.text-right +150,000
+            td.text-right 150,000
