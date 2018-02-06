@@ -3,12 +3,11 @@ body
   include ./includes/masthead.pug
 
   .container.my-4
-    .row.d-print-none
-      .col-lg-8.my-5.text-center
-        h1.text-blue
-          i.fa.fa-check.fa-lg.mr-2
-          | 예약완료
-        .lead 예약확인서가 투숙자의 이메일로 발송되었습니다.
+    .white-box.d-print-none.text-center.p-5
+      h1.text-blue
+        i.fa.fa-check.fa-lg.mr-2
+        | 예약완료
+      .lead 투숙자의 이메일로 예약 확인서가 발송 되었습니다.
 
     .row
       .col-lg-8
@@ -16,7 +15,7 @@ body
           .d-flex.align-items-center
             img.mr-2(src='/images/onda_logo.png', style='height: 18px')
             h4.m-0.text-gray Member's Mall
-          h1.text-center.py-5.my-5 예약확인서
+          h1.text-center.py-5.my-5 예약 확인서
           .row
             .col-lg
               dl.row
@@ -124,6 +123,6 @@ body
                 swal("예약이 취소 되었습니다.", "", "success");
               });
             `
-          button.btn.btn-outline-danger.btn-block.btn-lg(type='button', onclick= message01)
+          button.btn.btn-outline-light.btn-block.btn-lg(type='button', onclick= message01)
             i.fa.fa-times.fa-lg.mr-2
             | 예약취소

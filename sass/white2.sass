@@ -45,14 +45,21 @@ button
   border: none
   cursor: pointer
 
+.btn-outline-primary
+  border-color: $blue
+  color: $blue
+  &:hover
+    background-color: $blue
+    border-color: $blue
+
 .btn-outline-light
-  border: 1px solid $gray-line
+  border-color: $gray-line
   color: $gray
   background-color: $light
-  &:hover, &:focus, &:active
-    background-color: $light
+  &:hover, &:focus
+    background-color: darken($light, 3%)
+    border-color: $gray-line
     color: $gray
-    border: 1px solid $gray-line
 
 .show>.btn-outline-light.dropdown-toggle
   background-color: $light
@@ -191,6 +198,17 @@ input.form-control, textarea.form-control
 // Table
 table.table
   font-size: .95rem
+table.table.table-hover
+  tr:hover
+    th, td
+      background-color: $light
+  thead
+    tr:hover
+      th, td
+        background-color: white
+.table-vertical-middle
+  td, th
+    vertical-align: middle
 
 // Pagination
 ul.pagination
@@ -203,8 +221,47 @@ ul.pagination
     .page-link
       border-color: $gray-line
 
+// Tooltip
+.tooltip-inner
+  background-color: $gray
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before
+    margin-left: -3px
+    content: ""
+    border-width: 5px 5px 0
+    border-top-color: $gray
+
+
+
+
+
+
+
+
+
+
+
 
 //------------------------ Page Layout ----------------------//
+
+//---------- Login Page
+body#login-page
+  background: url('/images/temp-tmon.jpg') bottom center no-repeat fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+#login-box
+  min-width: 20rem
+  max-width: 24rem
+  margin: 27vh auto 0 auto
+  padding-top: 0
+  .login-header
+    margin: 1rem 0 4rem 0
+    display: flex
+    align-items: center
+    .logo
+      height: 20px
+      margin-right: 1rem
 
 // Master Head
 header

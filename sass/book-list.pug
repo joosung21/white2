@@ -1,0 +1,277 @@
+include ./includes/header.pug
+body
+  include ./includes/masthead.pug
+
+  .container.my-4
+    .white-box.p-5
+      h1.mb-5 예약목록
+      .form-row.mb-5
+        .col-md-2
+          select.custom-select(style='width:100%')
+            option 예약일시
+            option 체크인
+        .col-md-3
+          input.form-control.form-calendar(type='text', value='2018-01-01')
+        .col-md-3
+          input.form-control.form-calendar(type='text', value='2018-02-02')
+        .col-md-4
+          .input-group
+            input.form-control(type='text', placeholder='이름/숙소명/예약번호')
+            .input-group-btn
+              button.btn.btn-outline-light(type='button')
+                i.fa.fa-search.fa-lg
+      table.table.table-hover
+        thead
+          tr
+            th ID
+            th 예약일시
+            th 예약자
+            th 숙소명
+            th 상품
+            th 체크인/체크아웃
+            th 가격
+            th 상태
+        tbody
+          tr(onclick='location.href="/confirm"')
+            td LF11024
+            td
+              | 2018-01-01
+              br
+              | 10:00
+            td
+              | 안주성 (성인 2, 유아 1)
+
+            td
+              | 제주 제주제이 호텔
+            td
+              | Deluxe Room x 1
+            td
+              | 2017-01-11 부터
+              br
+              | 2017-01-12 까지
+            td 240,000(1박)
+            td 예약완료
+          tr(onclick='location.href="/confirm"')
+            td LF11034
+            td
+              | 2017-12-23
+              br
+              | 19:01
+            td
+              | 데이몬 (성인 2, 유아 1)
+
+            td
+              | 화이트캐슬
+            td
+              | Deluxe Room x 1
+            td
+              | 2017-02-01 부터
+              br
+              | 2017-02-03 까지
+            td 500,000(2박)
+            td 예약완료
+          tr(onclick='location.href="/confirm"')
+            td LF10002
+            td
+              | 2017-01-01
+              br
+              | 10:00
+            td
+              | Jeff Woo (성인 2)
+
+            td
+              | 더 힐스파 펜션
+            td
+              | 월풀 독채 x 1
+            td
+              | 2017-01-11 부터
+              br
+              | 2017-01-12 까지
+            td 120,000(1박)
+            td 예약완료
+          tr(onclick='location.href="/confirm"')
+            td GE15505
+            td
+              | 2017-01-01
+              br
+              | 10:00
+            td
+              | Eric (성인 2, 유아 1)
+
+            td
+              | 제주 제주제이 호텔
+            td
+              | Deluxe Room x 1
+            td
+              | 2017-01-11 부터
+              br
+              | 2017-01-12 까지
+            td 240,000(1박)
+            td 예약완료
+          tr(onclick='location.href="/confirm"')
+            td LF11024
+            td
+              | 2018-01-01
+              br
+              | 10:00
+            td
+              | 안주성 (성인 2, 유아 1)
+
+            td
+              | 제주 제주제이 호텔
+            td
+              | Deluxe Room x 1
+            td
+              | 2017-01-11 부터
+              br
+              | 2017-01-12 까지
+            td 240,000(1박)
+            td.text-danger
+              b 취소됨
+          tr(onclick='location.href="/confirm"')
+            td LF11034
+            td
+              | 2017-12-23
+              br
+              | 19:01
+            td
+              | 데이몬 (성인 2, 유아 1)
+
+            td
+              | 화이트캐슬
+            td
+              | Deluxe Room x 1
+            td
+              | 2017-02-01 부터
+              br
+              | 2017-02-03 까지
+            td 500,000(2박)
+            td 예약완료
+          tr(onclick='location.href="/confirm"')
+            td LF10002
+            td
+              | 2017-01-01
+              br
+              | 10:00
+            td
+              | Jeff Woo (성인 2)
+
+            td
+              | 더 힐스파 펜션
+            td
+              | 월풀 독채 x 1
+            td
+              | 2017-01-11 부터
+              br
+              | 2017-01-12 까지
+            td 120,000(1박)
+            td 예약완료
+          tr(onclick='location.href="/confirm"')
+            td GE15505
+            td
+              | 2017-01-01
+              br
+              | 10:00
+            td
+              | Eric (성인 2, 유아 1)
+
+            td
+              | 제주 제주제이 호텔
+            td
+              | Deluxe Room x 1
+            td
+              | 2017-01-11 부터
+              br
+              | 2017-01-12 까지
+            td 240,000(1박)
+            td 예약완료
+          tr(onclick='location.href="/confirm"')
+            td LF11024
+            td
+              | 2018-01-01
+              br
+              | 10:00
+            td
+              | 안주성 (성인 2, 유아 1)
+
+            td
+              | 제주 제주제이 호텔
+            td
+              | Deluxe Room x 1
+            td
+              | 2017-01-11 부터
+              br
+              | 2017-01-12 까지
+            td 240,000(1박)
+            td 예약완료
+          tr(onclick='location.href="/confirm"')
+            td LF11034
+            td
+              | 2017-12-23
+              br
+              | 19:01
+            td
+              | 데이몬 (성인 2, 유아 1)
+
+            td
+              | 화이트캐슬
+            td
+              | Deluxe Room x 1
+            td
+              | 2017-02-01 부터
+              br
+              | 2017-02-03 까지
+            td 500,000(2박)
+            td 예약완료
+          tr(onclick='location.href="/confirm"')
+            td LF10002
+            td
+              | 2017-01-01
+              br
+              | 10:00
+            td
+              | Jeff Woo (성인 2)
+
+            td
+              | 더 힐스파 펜션
+            td
+              | 월풀 독채 x 1
+            td
+              | 2017-01-11 부터
+              br
+              | 2017-01-12 까지
+            td 120,000(1박)
+            td 예약완료
+          tr(onclick='location.href="/confirm"')
+            td GE15505
+            td
+              | 2017-01-01
+              br
+              | 10:00
+            td
+              | Eric (성인 2, 유아 1)
+
+            td
+              | 제주 제주제이 호텔
+            td
+              | Deluxe Room x 1
+            td
+              | 2017-01-11 부터
+              br
+              | 2017-01-12 까지
+            td 240,000(1박)
+            td 예약완료
+
+      nav.mt-5
+        ul.pagination.justify-content-center
+          li.page-item.disabled
+            span.page-link 이전
+          li.page-item.active
+            span.page-link 1
+          li.page-item
+            a.page-link(href='#') 2
+          li.page-item
+            a.page-link(href='#') 3
+          li.page-item
+            a.page-link(href='#') 다음
+

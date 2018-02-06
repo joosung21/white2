@@ -1,0 +1,369 @@
+include ./includes/header.pug
+body
+  include ./includes/masthead.pug
+
+  .container.my-4
+    .white-box.p-5
+      h1.mb-5  멤버관리
+      .form-row.mb-5
+        .col-md-6
+          .form-inline
+            select.custom-select
+              option 모든 부서
+              option 총무팀
+              option 기획팀
+              option 계약팀
+              option 인사팀
+              option 계약팀
+            input.form-control.mx-2(type='text', placeholder='이름으로 검색')
+            a.btn.btn-outline-light(href='#', data-toggle='modal', data-target='#teamModal')
+              i.fa.fa-gear.fa-lg.mr-2
+              | 부서 관리
+        .col-md-6.text-right
+          a.btn.btn-outline-primary.mr-2(href='#', data-toggle='modal', data-target='#addMemberModal')
+            i.fa.fa-plus.mr-2
+            | 멤버 추가
+          a.btn.btn-outline-primary(href='#', data-toggle='modal', data-target='#addMassMemberModal')
+            i.fa.fa-th-list.fa-lg.mr-2
+            | 여러멤버 추가
+      -
+        var message01 = `
+          swal({
+            title: "멤버를 삭제 하시겠습니까?",
+            text: "총무팀 강하나",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "네, 삭제합니다.",
+            cancelButtonText: "아니오",
+            closeOnConfirm: false
+          },
+          function(){
+            swal("멤버가 삭제되었습니다.", "", "success");
+          });
+        `
+      table.table.table-hover.table-vertical-middle
+        thead
+          tr
+            th
+              | 이름
+              i.fa.fa-angle-down.ml-2
+            th
+              | 부서
+              i.fa.fa-angle-down.ml-2
+            th
+        tbody
+          tr
+            th
+              i.fa.fa-user.fa-lg.mr-2
+              | 강하나
+            td 총무팀
+            td.text-right
+              .btn-group.mr-2
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#resetPasswordModal')
+                  i.fa.fa-lock
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#editMemberModal')
+                  i.fa.fa-pencil
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='멤버 삭제', data-dismiss='modal', onclick= message01)
+                  i.fa.fa-times
+          tr
+            th
+              i.fa.fa-user.fa-lg.mr-2
+              | 구진규
+            td 기획팀
+            td.text-right
+              .btn-group.mr-2
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#resetPasswordModal')
+                  i.fa.fa-lock
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#editMemberModal')
+                  i.fa.fa-pencil
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='멤버 삭제', data-dismiss='modal', onclick= message01)
+                  i.fa.fa-times
+          tr
+            th
+              i.fa.fa-user.fa-lg.mr-2
+              | 나문성
+            td 계약팀
+            td.text-right
+              .btn-group.mr-2
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#resetPasswordModal')
+                  i.fa.fa-lock
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#editMemberModal')
+                  i.fa.fa-pencil
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='멤버 삭제', data-dismiss='modal', onclick= message01)
+                  i.fa.fa-times
+          tr
+            th
+              i.fa.fa-user.fa-lg.mr-2
+              | 조유화
+            td 인사팀
+            td.text-right
+              .btn-group.mr-2
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#resetPasswordModal')
+                  i.fa.fa-lock
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#editMemberModal')
+                  i.fa.fa-pencil
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='멤버 삭제', data-dismiss='modal', onclick= message01)
+                  i.fa.fa-times
+          tr
+            th
+              i.fa.fa-user.fa-lg.mr-2
+              | 반지헌
+            td 기획팀
+            td.text-right
+              .btn-group.mr-2
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#resetPasswordModal')
+                  i.fa.fa-lock
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#editMemberModal')
+                  i.fa.fa-pencil
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='멤버 삭제', data-dismiss='modal', onclick= message01)
+                  i.fa.fa-times
+          tr
+            th
+              i.fa.fa-user.fa-lg.mr-2
+              | 나미화
+            td 총무팀
+            td.text-right
+              .btn-group.mr-2
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#resetPasswordModal')
+                  i.fa.fa-lock
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#editMemberModal')
+                  i.fa.fa-pencil
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='멤버 삭제', data-dismiss='modal', onclick= message01)
+                  i.fa.fa-times
+          tr
+            th
+              i.fa.fa-user.fa-lg.mr-2
+              | 윤진미
+            td 계약팀
+            td.text-right
+              .btn-group.mr-2
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#resetPasswordModal')
+                  i.fa.fa-lock
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#editMemberModal')
+                  i.fa.fa-pencil
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='멤버 삭제', data-dismiss='modal', onclick= message01)
+                  i.fa.fa-times
+          tr
+            th
+              i.fa.fa-user.fa-lg.mr-2
+              | 이준
+            td 계약팀
+            td.text-right
+              .btn-group.mr-2
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#resetPasswordModal')
+                  i.fa.fa-lock
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#editMemberModal')
+                  i.fa.fa-pencil
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='멤버 삭제', data-dismiss='modal', onclick= message01)
+                  i.fa.fa-times
+          tr
+            th
+              i.fa.fa-user.fa-lg.mr-2
+              | 장연우
+            td 기획팀
+            td.text-right
+              .btn-group.mr-2
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#resetPasswordModal')
+                  i.fa.fa-lock
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#editMemberModal')
+                  i.fa.fa-pencil
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='멤버 삭제', data-dismiss='modal', onclick= message01)
+                  i.fa.fa-times
+          tr
+            th
+              i.fa.fa-user.fa-lg.mr-2
+              | 반요환
+            td 총무팀
+            td.text-right
+              .btn-group.mr-2
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#resetPasswordModal')
+                  i.fa.fa-lock
+                a.btn.btn-light(href='#', data-toggle='modal', data-target='#editMemberModal')
+                  i.fa.fa-pencil
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='멤버 삭제', data-dismiss='modal', onclick= message01)
+                  i.fa.fa-times
+
+      nav.mt-5
+        ul.pagination.justify-content-center
+          li.page-item.disabled
+            span.page-link 이전
+          li.page-item.active
+            span.page-link 1
+          li.page-item
+            a.page-link(href='#') 2
+          li.page-item
+            a.page-link(href='#') 3
+          li.page-item
+            a.page-link(href='#') 다음
+
+//- 부서관리 modal
+#teamModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5.modal-title
+          i.fa.fa-gear.fa-lg.mr-2
+          | 부서 관리
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        table.table.table-vertical-middle
+          tbody
+            tr
+              td 총무팀
+              td.text-right
+                a.btn.btn-light.mr-2(href='#', data-toggle='tooltip', title='부서명 변경')
+                  i.fa.fa-pencil.fa-lg
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='부서 삭제')
+                  i.fa.fa-times.fa-lg
+            tr
+              td 기획팀
+              td.text-right
+                a.btn.btn-light.mr-2(href='#', data-toggle='tooltip', title='부서명 변경')
+                  i.fa.fa-pencil.fa-lg
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='부서 삭제')
+                  i.fa.fa-times.fa-lg
+            tr
+              td 계약팀
+              td.text-right
+                a.btn.btn-light.mr-2(href='#', data-toggle='tooltip', title='부서명 변경')
+                  i.fa.fa-pencil.fa-lg
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='부서 삭제')
+                  i.fa.fa-times.fa-lg
+            tr
+              td 인사팀
+              td.text-right
+                a.btn.btn-light.mr-2(href='#', data-toggle='tooltip', title='부서명 변경')
+                  i.fa.fa-pencil.fa-lg
+                a.btn.btn-light(href='#', data-toggle='tooltip', title='부서 삭제')
+                  i.fa.fa-times.fa-lg
+            tr
+              td
+                .input-group
+                  input.form-control(type="text")
+                  .input-group-btn
+                    a.btn.btn-primary(href='#') 추가
+              td
+
+      .modal-footer
+        button.btn.btn-light(type='button', data-dismiss='modal') 취소
+        button.btn.btn-primary(type='button') 변경사항 저장
+
+//- 멤버추가 modal
+#addMemberModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5.modal-title
+          i.fa.fa-plus.fa-lg.mr-2
+          | 맴버추가
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        .form-group
+          label 이름
+          input.form-control(type="text")
+        .form-group
+          label 회사메일
+          input.form-control(type="email")
+        .form-group
+          label 부서
+          select.custom-select.d-block.w-100
+            option 총무팀
+            option 기획팀
+            option 계약팀
+            option 인사팀
+            option 계약팀
+        .form-row.mt-5
+          .col
+            .form-group
+              label 비밀번호 입력
+              input.form-control(type="password")
+          .col
+            .form-group
+              label 비밀번호 재입력
+              input.form-control(type="password")
+
+      .modal-footer
+        button.btn.btn-light(type='button', data-dismiss='modal') 취소
+        button.btn.btn-primary(type='button') 멤버추가
+
+//- 멤버수정 modal
+#editMemberModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5.modal-title
+          i.fa.fa-pencil.fa-lg.mr-2
+          | 맴버정보 수정
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        .form-group
+          label 이름
+          input.form-control(type="text", value='강하나')
+        .form-group
+          label 회사메일
+          input.form-control(type="email", value='hana.kang@company.com')
+        .form-group
+          label 부서
+          select.custom-select.d-block.w-100
+            option 총무팀
+            option 기획팀
+            option 계약팀
+            option 인사팀
+            option 계약팀
+
+      .modal-footer
+        button.btn.btn-light(type='button', data-dismiss='modal') 취소
+        button.btn.btn-primary(type='button') 변경사항 저장
+
+//- 여러 멤버추가 modal
+#addMassMemberModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5.modal-title
+          i.fa.fa-th-list.fa-lg.mr-2
+          | 여러맴버 추가
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        p 1. CSV 폼을 다운로드 받습니다.
+        .form-group
+          a.btn.btn-primary(href='#')
+            i.fa.fa-download.fa-lg.mr-2
+            | CSV 폼 다운로드
+        p 2. 멤버 정보를 입력한 CSV 파일을 업로드 합니다.
+        .form-group
+          input.form-control-file(type="file")
+
+      .modal-footer
+        button.btn.btn-light(type='button', data-dismiss='modal') 취소
+        button.btn.btn-primary(type='button', disabled) 여러멤버 추가
+
+//- 비밀번호 재설정 modal
+#resetPasswordModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        h5.modal-title
+          i.fa.fa-lock.fa-lg.mr-2
+          | 비밀번호 재설정
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        .form-row
+          .col
+            .form-group
+              label 비밀번호 입력
+              input.form-control(type="password")
+          .col
+            .form-group
+              label 비밀번호 재입력
+              input.form-control(type="password")
+
+      .modal-footer
+        button.btn.btn-light(type='button', data-dismiss='modal') 취소
+        button.btn.btn-primary(type='button', disabled) 재설정
