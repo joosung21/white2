@@ -12,6 +12,7 @@ app.get('/view', function (req, res){res.render('view')})
 app.get('/book', function (req, res){res.render('book')})
 app.get('/confirm', function (req, res){res.render('confirm')})
 app.get('/favorite', function (req, res){res.render('favorite')})
+app.get('/book-list', function (req, res){res.render('book-list')})
 
 app.listen(3000, function () {
   console.log('App listening on port 3000!')
