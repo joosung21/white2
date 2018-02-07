@@ -7,25 +7,36 @@ body.index-page
       .date.form-inline
         input.form-control.form-calendar.mr-3(type='text', placeholder='체크인', style='width: 244px')
         input.form-control.form-calendar.mr-3(type='text', placeholder='체크아웃', style='width: 244px')
-        input.form-control(type='text', placeholder='인원', style='width: 80px')
+        select.custom-select
+            option 1명
+            option(selected) 2명
+            option 3명
+            option 4명
+            option 5명
+            option 6명
+            option 7명
+            option 8명
+            option 9명
+            option 10명
+            option 11명
+            option 12명
+            option 13명
+            option 14명
+            option 15명
+            option 16명
       .form-inline
+        input.form-control.mr-3(type='text', placeholder='모든지역', style='width: 244px', data-toggle='dropdown')
+        .dropdown-menu
+          a.dropdown-item(href='#') 제주도
+          a.dropdown-item(href='#') 제주도 서귀포시
+          a.dropdown-item(href='#') 제주도 제주시
         select.custom-select.mr-3(style='width: 244px')
-          option 모든 지역
-          option 서울
-          option 제주도
-          option 가평
-          option 춘천
-          option 안면도
-          option 변산반도
-          option 부산
-          option 여수
-        select.custom-select.mr-3(style='width: 244px')
-          option 모든 숙소형태
-          option 펜션
-          option 호텔
-          option 리조트
-          option 모텔
-          option 캠핑
+          option 모든 가격대
+          option 5만원 이하
+          option 5만원 - 10만원
+          option 10만원 - 20만원
+          option 20만원 - 30만원
+          option 30만원 이상
         .btn-group
           button.btn.btn-outline-light.dropdown-toggle(type='button', data-toggle='dropdown')
             | 태그로 필터하기

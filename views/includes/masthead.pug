@@ -40,11 +40,21 @@ header
 
     button.search-button(type='button')
       i.fa.fa-search.fa-lg.fa-flip-horizontal
+
+  .head-view-change
+    a(href='/list-view')
+      i.fa.fa-bars.fa-2x.mr-2
+      | 리스트
+    a(href='/')
+      i.fa.fa-map-marker.fa-2x
+      | 지도
+
+
   .head-nav.ml-auto
     span.text-blue 150,000 Point
     a.nav(href='/favorite')
       | 내 찜록록
-      span.badge.badge-pill.badge-primary.ml-1 6
+      span.badge.badge-pill.badge-secondary.ml-1 6
     a.nav(href='/book-list') 내 예약
     a.nav.last.dropdown(href='#', data-toggle='dropdown')
       i.fa.fa-user.fa-lg.mr-2

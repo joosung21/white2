@@ -4,6 +4,15 @@ $gray: #999999
 $light: #f9f9f9
 $gray-line: rgba(0, 0, 0, 0.075)
 
+// Extends
+
+%cover-image
+  background: url('/images/no-image.png') no-repeat center center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
 // Webfont CDN
 @import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css')
 
@@ -177,11 +186,8 @@ input.form-control, textarea.form-control
     border-top-left-radius: 7px
     border-top-right-radius: 7px
     height: 180px
-    background: url('/images/no-image.png') no-repeat center center
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+    @extend %cover-image
+
   .card-body
     .card-title
       color: $blue
@@ -229,14 +235,6 @@ ul.pagination
     content: ""
     border-width: 5px 5px 0
     border-top-color: $gray
-
-
-
-
-
-
-
-
 
 
 
@@ -301,6 +299,20 @@ header
       font-weight: 300
     .search-button
       height: 60px
+
+  .head-view-change
+    display: flex
+    align-items: center
+    margin-left: 9rem
+    a
+      display: flex
+      align-items: center
+      color: $gray
+      text-decoration: none
+      margin: 0 .75rem
+      &:hover, &.active
+        color: $blue
+
   .head-nav
     display: flex
     align-items: center
@@ -374,17 +386,18 @@ body.index-page
   line-height: 1.7rem
   border: 1px solid $gray-line
   margin-bottom: 2rem
-  h4
+  h4, h5
     margin-bottom: 1.5rem
   ul
     margin-bottom: 2rem
   ul.row
     li
      margin-bottom: .5rem
-  p
+  hr
+    border-color: $gray-line
+    margin: 2rem 0
 
-
-//---------------- Main Page -------------------//
+//---------------- Map-view Page -------------------//
 .list-container
   width: 720px
   padding-top: 60px
@@ -439,6 +452,36 @@ body.index-page
       color: $blue
       margin-top: 1rem
 
+//---------- List-view Page --------------//
+.list-view-items
+  margin-bottom: 4rem
+  .item-image
+    border-radius: 4px
+    width: 100%
+    height: 180px
+    @extend %cover-image
+    cursor: pointer
+  .item-content
+    .title
+      color: $blue
+      margin: 0
+    .address
+      color: $gray
+    ul.rooms
+      margin-top: 2rem
+      margin-bottom: 1rem
+      li
+        padding: .5rem 0
+        display: flex
+        justify-content: space-between
+        color: $gray
+        border-bottom: 1px solid $gray-line
+        .room-title
+        .room-stock
+          text-align: right
+        .room-price
+          text-align: right
+
 //------------ View Page ----------------//
 .view-header
   background-color: white
@@ -467,7 +510,7 @@ body.index-page
     width: 33px
     height: 33px
     transition: all .3s
-  button:hover
+  button:hover, button.active
     i.fa
       background-color: $blue
       color: $light
@@ -479,7 +522,10 @@ body.index-page
     margin: 4rem 0
     &.diabled
       opacity: .5
-
+    .room-image
+      width: 100%
+      height: 210px
+      @extend %cover-image
 
 .view-right
   margin-top: -140px

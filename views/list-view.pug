@@ -1,0 +1,426 @@
+include ./includes/header.pug
+body
+  include ./includes/masthead.pug
+
+  .py-4
+
+  .container
+    .row
+      .col-md-4
+        .white-box
+          input.form-control.form-calendar.mb-3(type='text', placeholder='체크인')
+          input.form-control.form-calendar.mb-3(type='text', placeholder='체크아웃')
+          select.custom-select.w-100.mb-3
+            option 1명
+            option(selected) 2명
+            option 3명
+            option 4명
+            option 5명
+            option 6명
+            option 7명
+            option 8명
+            option 9명
+            option 10명
+            option 11명
+            option 12명
+            option 13명
+            option 14명
+            option 15명
+            option 16명
+          input.form-control.mb-3(type='text', placeholder='제주도', data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='#') 제주도
+            a.dropdown-item(href='#') 제주도 서귀포시
+            a.dropdown-item(href='#') 제주도 제주시
+          select.custom-select.w-100
+            option 모든 가격대
+            option 5만원 이하
+            option 5만원 - 10만원
+            option 10만원 - 20만원
+            option 20만원 - 30만원
+            option 30만원 이상
+
+          button.btn.btn-link.btn-block.my-4(type='button')
+            i.fa.fa-times.fa-lg.mr-2
+            | 상세조건 초기화
+
+          h5 숙소 유형
+          label.custom-control.custom-checkbox.d-block
+            input.custom-control-input(type='checkbox')
+            span.custom-control-indicator
+            span.custom-control-description 펜션
+          label.custom-control.custom-checkbox.d-block
+            input.custom-control-input(type='checkbox')
+            span.custom-control-indicator
+            span.custom-control-description 호텔
+          label.custom-control.custom-checkbox.d-block
+            input.custom-control-input(type='checkbox')
+            span.custom-control-indicator
+            span.custom-control-description 게스트하우스
+          label.custom-control.custom-checkbox.d-block
+            input.custom-control-input(type='checkbox')
+            span.custom-control-indicator
+            span.custom-control-description 모텔
+
+          h5.mt-5 공공시설
+          .row.no-gutters
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 노래방
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 매점/편의점
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 바베큐장
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 세미나실
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 수영장
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 카페
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 피트니스
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 공용스파
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 골프장
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 레스토랑
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 키즈플레이룸
+
+          h5.mt-5 서비스
+          .row.no-gutters
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description Wi-Fi
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 반려동물 동반가능
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 발렛파킹
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 조식 서비스
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 짐보관
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 취사가능
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 프린터 사용
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 픽업
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 금연
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 객실내흡연
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 개인사물함
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 무료주차
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 장애인 편의시설
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 공항 셔틀
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 바/라운지
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 마사지
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 셔틀버스
+
+          h5.mt-5 주변관광지
+          .row.no-gutters
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 골프장
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 수목원/휴양림
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 스키장
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 해수욕장
+            .col-6
+              label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description 강/호수
+
+      .col-md-8
+        .white-box
+
+          .list-view-items.row
+            .col-md-4
+              .item-image(style='background-image: url("/images/temp-hotel-02.png")', onclick='location.href="/view"')
+            .col-md-8
+              .item-content
+                .d-flex
+                  h3.title 제주 제이제이 호텔
+                  .quick-buttons.ml-auto.m-0
+                    button.btn.btn-white.p-0(type='button')
+                      i.fa.fa-heart.fa-lg
+                .address 제주도 서귀포시 위미리 313
+                ul.rooms.list-unstyled
+                  li.form-row
+                    .room-title.col-6 Single Room
+                    .room-stock.col-3 12객실 남음
+                    .room-price.col-3 120,000원
+                  li.form-row
+                    .room-title.col-6 Deluxe Room
+                    .room-stock.col-3 5객실 남음
+                    .room-price.col-3 160,000원
+                  li.form-row
+                    .room-title.col-6 Suite Room
+                    .room-stock.col-3 1객실 남음
+                    .room-price.col-3 240,000원
+                .text-right
+                  a.btn.btn-link.p-0(href='/view')
+                    | 자세히 보기
+                    i.fa.fa-angle-right
+
+          .list-view-items.row
+            .col-md-4
+              .item-image(style='background-image: url("/images/temp-hotel-01.png")', onclick='location.href="/view"')
+            .col-md-8
+              .item-content
+                .d-flex
+                  h3.title 베스트 웨스턴
+                  .quick-buttons.ml-auto.m-0
+                    button.btn.btn-white.p-0.active(type='button')
+                      i.fa.fa-heart.fa-lg
+                .address 제주도 서귀포시 위미리 313
+                ul.rooms.list-unstyled
+                  li.form-row
+                    .room-title.col-6 Single Room
+                    .room-stock.col-3 12객실 남음
+                    .room-price.col-3 120,000원
+                  li.form-row
+                    .room-title.col-6 Deluxe Room
+                    .room-stock.col-3 5객실 남음
+                    .room-price.col-3 160,000원
+                  li.form-row
+                    .room-title.col-6 Suite Room
+                    .room-stock.col-3 1객실 남음
+                    .room-price.col-3 240,000원
+                .text-right
+                  a.btn.btn-link.p-0(href='/view')
+                    | 자세히 보기
+                    i.fa.fa-angle-right
+
+          .list-view-items.row
+            .col-md-4
+              .item-image(style='background-image: url("/images/temp-hotel-03.png")', onclick='location.href="/view"')
+            .col-md-8
+              .item-content
+                .d-flex
+                  h3.title 레몬트리 테라스
+                  .quick-buttons.ml-auto.m-0
+                    button.btn.btn-white.p-0(type='button')
+                      i.fa.fa-heart.fa-lg
+                .address 제주도 서귀포시 위미리 313
+                ul.rooms.list-unstyled
+                  li.form-row
+                    .room-title.col-6 Single Room
+                    .room-stock.col-3 12객실 남음
+                    .room-price.col-3 120,000원
+                  li.form-row
+                    .room-title.col-6 Deluxe Room
+                    .room-stock.col-3 5객실 남음
+                    .room-price.col-3 160,000원
+                  li.form-row
+                    .room-title.col-6 Suite Room
+                    .room-stock.col-3 1객실 남음
+                    .room-price.col-3 240,000원
+                  li.form-row
+                    .room-title.col-6 Single Room
+                    .room-stock.col-3 12객실 남음
+                    .room-price.col-3 120,000원
+                  li.form-row
+                    .room-title.col-6 Deluxe Room
+                    .room-stock.col-3 5객실 남음
+                    .room-price.col-3 160,000원
+                  li.form-row
+                    .room-title.col-6 Suite Room
+                    .room-stock.col-3 1객실 남음
+                    .room-price.col-3 240,000원
+                .text-right
+                  a.btn.btn-link.p-0(href='/view')
+                    | 자세히 보기
+                    i.fa.fa-angle-right
+
+          .list-view-items.row
+            .col-md-4
+              .item-image(style='background-image: url("/images/temp-hotel-04.png")', onclick='location.href="/view"')
+            .col-md-8
+              .item-content
+                .d-flex
+                  h3.title 서니사이드 헐리데이 인
+                  .quick-buttons.ml-auto.m-0
+                    button.btn.btn-white.p-0(type='button')
+                      i.fa.fa-heart.fa-lg
+                .address 제주도 서귀포시 위미리 313
+                ul.rooms.list-unstyled
+                  li.form-row
+                    .room-title.col-6 Single Room
+                    .room-stock.col-3 12객실 남음
+                    .room-price.col-3 120,000원
+                  li.form-row
+                    .room-title.col-6 Deluxe Room
+                    .room-stock.col-3 5객실 남음
+                    .room-price.col-3 160,000원
+                  li.form-row
+                    .room-title.col-6 Suite Room
+                    .room-stock.col-3 1객실 남음
+                    .room-price.col-3 240,000원
+                  li.form-row
+                    .room-title.col-6 Single Room
+                    .room-stock.col-3 12객실 남음
+                    .room-price.col-3 120,000원
+                  li.form-row
+                    .room-title.col-6 Deluxe Room
+                    .room-stock.col-3 5객실 남음
+                    .room-price.col-3 160,000원
+                  li.form-row
+                    .room-title.col-6 Suite Room
+                    .room-stock.col-3 1객실 남음
+                    .room-price.col-3 240,000원
+                .text-right
+                  a.btn.btn-link.p-0(href='/view')
+                    | 자세히 보기
+                    i.fa.fa-angle-right
+
+          .list-view-items.row
+            .col-md-4
+              .item-image(style='background-image: url("/images/temp-hotel-05.png")', onclick='location.href="/view"')
+            .col-md-8
+              .item-content
+                .d-flex
+                  h3.title 온다 게스트하우스
+                  .quick-buttons.ml-auto.m-0
+                    button.btn.btn-white.p-0(type='button')
+                      i.fa.fa-heart.fa-lg
+                .address 제주도 서귀포시 위미리 313
+                ul.rooms.list-unstyled
+                  li.form-row
+                    .room-title.col-6 Single Room
+                    .room-stock.col-3 12객실 남음
+                    .room-price.col-3 120,000원
+                  li.form-row
+                    .room-title.col-6 Deluxe Room
+                    .room-stock.col-3 5객실 남음
+                    .room-price.col-3 160,000원
+                  li.form-row
+                    .room-title.col-6 Suite Room
+                    .room-stock.col-3 1객실 남음
+                    .room-price.col-3 240,000원
+                  li.form-row
+                    .room-title.col-6 Single Room
+                    .room-stock.col-3 12객실 남음
+                    .room-price.col-3 120,000원
+                  li.form-row
+                    .room-title.col-6 Deluxe Room
+                    .room-stock.col-3 5객실 남음
+                    .room-price.col-3 160,000원
+                  li.form-row
+                    .room-title.col-6 Suite Room
+                    .room-stock.col-3 1객실 남음
+                    .room-price.col-3 240,000원
+                .text-right
+                  a.btn.btn-link.p-0(href='/view')
+                    | 자세히 보기
+                    i.fa.fa-angle-right
+
+        button.btn.btn-light.btn-block.mb-5.p-3(type='button')
+          i.fa.fa-angle-down.fa.mr-2
+          | 더보기
+

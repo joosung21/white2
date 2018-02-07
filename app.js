@@ -8,6 +8,7 @@ app.use('/', express.static('public'))
 app.use('/assets/', express.static('assets'))
 
 app.get('/', function (req, res){res.render('index')})
+app.get('/list-view', function (req, res){res.render('list-view')})
 app.get('/login', function (req, res){res.render('login')})
 app.get('/view', function (req, res){res.render('view')})
 app.get('/book', function (req, res){res.render('book')})
