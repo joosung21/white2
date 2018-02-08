@@ -21,25 +21,16 @@ body
         .col-lg-8
           .property-title
             .category 제주도 > 호텔
-            h1.property-name 제주 그린메도우 호텔
+            .d-flex.justify-content-between
+              h1.property-name 제주 그린메도우 호텔
+              .quick-buttons
+                button.btn.btn-white(type='button')
+                  i.fa.fa-heart.fa-lg.mr-2
+                  | 찜하기
 
   .container.my-4
     .row
       .col-lg-8
-        .quick-buttons.row
-          .col-4
-            button.btn.btn-white(type='button')
-              i.fa.fa-heart.fa-lg.mr-2
-              | 찜하기
-          .col-4.text-center
-            button.btn.btn-white(type='button')
-              i.fa.fa-envelope.fa-lg.mr-2
-              | 문의하기
-          .col-4.text-right
-            button.btn.btn-white(type='button')
-              i.fa.fa-share-square.fa-lg.mr-2
-              | 공유하기
-
         .white-box.room-list
           .search-box.form-row
             .col-md-5
@@ -55,8 +46,12 @@ body
             .col-lg-6.pl-md-4
               h4 Single Room
               div
-                i.fa.fa-bed.fa-lg.fa-fw
-                span 트윈침대 1개 + 조식 2인 포함
+                span
+                  i.fa.fa-cube.fa-lg.fa-fw
+                  | 56m²
+                span.ml-4
+                  i.fa.fa-bed.fa-lg.fa-fw
+                  span 트윈침대 1개
               p.mt-2
                 | 에어컨, 전용욕실, 평면TV, 무료 WiFi, 난방시설, 소파, 헤어드라이기, 욕실용품, 화장실, 슬리펴, 전화, 케이블채널, 냉장고, 전기주전자
               .d-flex.align-items-center
@@ -82,8 +77,12 @@ body
             .col-lg-6.pl-md-4
               h4 Deluxe Room
               div
-                i.fa.fa-bed.fa-lg.fa-fw
-                span 트윈침대 1개 + 조식 2인 포함
+                span
+                  i.fa.fa-cube.fa-lg.fa-fw
+                  | 56m²
+                span.ml-4
+                  i.fa.fa-bed.fa-lg.fa-fw
+                  span 트윈침대 1개
               p.mt-2
                 | 에어컨, 전용욕실, 평면TV, 무료 WiFi, 난방시설, 소파, 헤어드라이기, 욕실용품, 화장실, 슬리펴, 전화, 케이블채널, 냉장고, 전기주전자
               .d-flex.align-items-center
@@ -100,20 +99,7 @@ body
             br
             br
             | 피트니스 센터에서 운동하시거나 25미터 수영장에 뛰어드시면 하루의 피로를 푸실 수 있습니다. 스파에서는 페이셜 마사지나 바디 트리트먼트를 받으실 수 있습니다. 그랜드 힐튼 서울 호텔에는 최대 2,500명을 수용하여 회의나 이벤트, 웨딩, 콘서트 등 다양한 목적에 맞게 이용할 수 있는 컨벤션 센터가 있습니다. 또한 회의실과 그랜드볼룸, 최첨단 오디오비주얼 설비를 갖춘 컨벤션 홀 및 초고속 인터넷을 기본으로 비즈니스에 필요한 모든 설비를 갖춘 비즈니스 센터를 마련하여 모든 행사 및 비즈니스를 지원합니다.
-          h4 공공시설
-          ul.row
-            li.col-6 매점/편의점
-            li.col-6 세미나실
-            li.col-6 수영장
-            li.col-6 카페
-            li.col-6 레스토랑
-          h4 숙소 서비스
-          ul.row
-            li.col-6 조식서비스
-            li.col-6 WiFi
-            li.col-6 발렛파킹
-            li.col-6 금연
-            li.col-6 공항 셔틀
+
           h4.mt-5 유의사항
           p
             | - 최대인원 초과시 입실 및 환불이 불가합니다.
@@ -144,8 +130,6 @@ body
             br
             | - 저희 펜션은 자연휴양림내에 위치하고 있어서 폭죽,불꽃놀이 사용을 할 수 없습니다.
 
-
-
       .col-lg-4.view-right
         .white-box.location.p-4
           #viewmap(style='height: 250px')
@@ -166,32 +150,25 @@ body
             script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAYAR9ha33tDQfl81KCVoePD_w3KcAaWGo&callback=initMap')
           .address.text-gray 제주도 서귀포시 위미리 136-17
         .white-box
-          p
+          h4 입실정보
+          p.mb-5
             | 체크인:  2:00pm
             br
             | 체크아웃: 11:00am
-          h5.my-4 가장 가까운 관광명소
-          dl.row.text-gray
-            dd.col-8 제주한라병원
-            dd.col-4 0.4 km
-            dd.col-8 신라면세점
-            dd.col-4 0.5 km
-            dd.col-8 제주 파라다이스 카지노
-            dd.col-4 0.6 km
-            dd.col-8 한라수목원
-            dd.col-4 2.4 km
-            dd.col-8 이호테우해변
-            dd.col-4 3.5 km
-            dd.col-8 용두암
-            dd.col-4 3.6 km
-            dd.col-8 Jeju Love Land
-            dd.col-4 4.3 km
-            dd.col-8 신비의도로
-            dd.col-4 4.5 km
-            dd.col-8 탑동광장
-            dd.col-4 4.5 km
-            dd.col-8 제주항
-            dd.col-4 5.5 km
+          h4 공공시설
+          ul.list-unstyled.row
+            li.col-6 매점/편의점
+            li.col-6 세미나실
+            li.col-6 수영장
+            li.col-6 카페
+            li.col-6 레스토랑
+          h4 숙소 서비스
+          ul.list-unstyled.row
+            li.col-6 조식서비스
+            li.col-6 WiFi
+            li.col-6 발렛파킹
+            li.col-6 금연
+            li.col-6 공항 셔틀
 
   //-- 슬라이더 모달
   #sliderModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='sliderModalLabel', aria-hidden='true')

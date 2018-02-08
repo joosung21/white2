@@ -182,16 +182,39 @@ input.form-control, textarea.form-control
   border-radius: 8px
   .card-img-top
     text-align: right
-    padding: 0 .6rem
+    padding: 3px .6rem
     border-top-left-radius: 7px
     border-top-right-radius: 7px
     height: 180px
     @extend %cover-image
+    display: flex
+    justify-content: space-between
+    align-items: start
+    .badge
+      margin-top: 14px
+      margin-left: -13px
+      font-weight: 400
+      font-size: .9rem
+      padding: .5rem 1.5rem
+      border-top-left-radius: 0px
+      border-bottom-left-radius: 0px
+      box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.12)
+    .quick-buttons
+      opacity: .7
+      button i.fa
+        color: white
+        border-color: white
+      &:hover, &.active
+        opacity: 1
+        button i.fa
+          background-color: white
+          color: $blue
 
   .card-body
     .card-title
       color: $blue
       font-size: 24px
+      margin-bottom: 0
     .card-text
       color: $gray
       font-weight: 300
@@ -406,6 +429,19 @@ body.index-page
     border-bottom: 1px solid $gray-line
     padding: 20px 30px
     background-color: white
+    .category
+      display: flex
+      justify-content: space-around
+      margin: .5rem 0 1.5rem 0
+      a
+        display: flex
+        align-items: center
+        border: none
+        &.active
+          background-color: $blue
+          color: white
+        i.fa
+          margin-right: .25rem
     .date
       margin-bottom: .75rem
     .tags

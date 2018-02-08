@@ -4,6 +4,22 @@ body.index-page
 
   .list-container
     .filters
+      .category
+        a.btn.btn-light(href='#')
+          | 모든숙소
+        a.btn.btn-light.active(href='#')
+          i.fa.fa-h-square.fa-2x
+          | 호텔
+        a.btn.btn-light(href='#')
+          i.fa.fa-home.fa-2x
+          | 펜션
+        a.btn.btn-light(href='#')
+          i.fa.fa-bed.fa-2x
+          | 게스트하우스/호스텔
+        a.btn.btn-light(href='#')
+          i.fa.fa-building.fa-2x
+          | 모텔
+
       .date.form-inline
         input.form-control.form-calendar.mr-3(type='text', placeholder='체크인', style='width: 244px')
         input.form-control.form-calendar.mr-3(type='text', placeholder='체크아웃', style='width: 244px')
@@ -82,91 +98,116 @@ body.index-page
         .col-md-6.unit
           .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-01.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart-o
+              .badge.badge-primary
+                | Best Seller
+              .quick-buttons.ml-auto
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
             .card-body
               .card-title 제주 파크사이드 호텔
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
         .col-md-6.unit
           .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-02.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart
+              .empty
+              .quick-buttons.active
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
             .card-body
               .card-title 리버사이드 호텔
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
         .col-md-6.unit
           .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-03.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart-o
+              .empty
+              .quick-buttons
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
             .card-body
               .card-title 파인트리 리조트
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
         .col-md-6.unit
           .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-04.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart-o
+              .empty
+              .quick-buttons
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
             .card-body
               .card-title 그린메도우
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
         .col-md-6.unit
           .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-05.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart-o
+              .empty
+              .quick-buttons
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
             .card-body
               .card-title 스윗소로우
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
         .col-md-6.unit
           .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-06.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart-o
+              .empty
+              .quick-buttons
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
             .card-body
               .card-title 사이공 팩토리
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
         .col-md-6.unit
           .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-01.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart-o
+              .empty
+              .quick-buttons
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
             .card-body
               .card-title 제주 파크사이드 호텔
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
         .col-md-6.unit
           .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-02.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart
+              .empty
+              .quick-buttons
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
             .card-body
               .card-title 리버사이드 호텔
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
       .text-center.mt-5
         button.btn.btn-light.btn-padding(type='button')
           | 리스트 더보기

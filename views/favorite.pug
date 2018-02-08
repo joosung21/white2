@@ -27,9 +27,6 @@ body.index-page
         a.btn.btn-light.ml-auto.mr-2(href='#', onclick= message01)
           i.fa.fa-trash.fa-lg.mr-2
           | 찜목록 비우기
-        a.btn.btn-light(href='/')
-          i.fa.fa-times.fa-lg.mr-2
-          | 닫기
 
     //- Loader
     .loader-wrapper
@@ -37,74 +34,50 @@ body.index-page
 
     .list-box
       .row
-        .col-md-6 내가 찜한 6개 숙소
+        .col-md-6 내가 찜한 3개
       .row
         .col-md-6.unit
           .card(onclick='location.href="/view"')
+            .card-img-top(style='background-image: url("/images/temp-hotel-06.png")')
+              .empty
+              .quick-buttons.active
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
+            .card-body
+              .card-title 사이공 팩토리
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
+        .col-md-6.unit
+          .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-01.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart
+              .empty
+              .quick-buttons.active
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
             .card-body
               .card-title 제주 파크사이드 호텔
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
         .col-md-6.unit
           .card(onclick='location.href="/view"')
             .card-img-top(style='background-image: url("/images/temp-hotel-02.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart
+              .empty
+              .quick-buttons.active
+                button.btn.btn-white.px-0(type='button')
+                  i.fa.fa-heart.fa-lg
             .card-body
               .card-title 리버사이드 호텔
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
-        .col-md-6.unit
-          .card(onclick='location.href="/view"')
-            .card-img-top(style='background-image: url("/images/temp-hotel-03.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart
-            .card-body
-              .card-title 파인트리 리조트
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
-        .col-md-6.unit
-          .card(onclick='location.href="/view"')
-            .card-img-top(style='background-image: url("/images/temp-hotel-04.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart
-            .card-body
-              .card-title 그린메도우
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
-        .col-md-6.unit
-          .card(onclick='location.href="/view"')
-            .card-img-top(style='background-image: url("/images/temp-hotel-05.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart
-            .card-body
-              .card-title 스윗소로우
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
-        .col-md-6.unit
-          .card(onclick='location.href="/view"')
-            .card-img-top(style='background-image: url("/images/temp-hotel-06.png")')
-              a.favorite(href='#')
-                i.fa.fa-heart
-            .card-body
-              .card-title 사이공 팩토리
-              .card-text
-                | 제주도 서귀포시 위미리
-                br
-                | 120,000원 - 240,000원
+              .card-address 제주도 서귀포시 위미리
+              .card-text.mt-4
+                .d-flex
+                  span 120,000원
+                  .ml-auto.text-blue 16객실 가능
 
   .map-container
     #map(style='height: 100%')
